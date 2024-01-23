@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Islami</string>
+    <string name="islami">إسلامي</string>
+    <string name="nav_quran_text">القرآن</string>
+    <string name="nav_hadeeth_text">الحديث</string>
+    <string name="nav_sebha_text">السبحة</string>
+    <string name="nav_radio_text">الراديو</string>
 </resources>
