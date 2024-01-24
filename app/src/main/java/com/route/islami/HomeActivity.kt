@@ -1,13 +1,14 @@
-package com.example.islami
+package com.route.islami
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.islami.R
 import com.example.islami.databinding.ActivityHomeBinding
-import com.example.islami.fragments.HadeethFragment
-import com.example.islami.fragments.QuranFragment
-import com.example.islami.fragments.RadioFragment
-import com.example.islami.fragments.SebhaFragment
+import com.route.islami.fragments.HadeethFragment
+import com.route.islami.fragments.QuranFragment
+import com.route.islami.fragments.RadioFragment
+import com.route.islami.fragments.SebhaFragment
 
 class HomeActivity : AppCompatActivity() {
 
@@ -16,6 +17,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         binding.navBar.setOnItemSelectedListener {
             when (it.itemId) {
             R.id.nav_quran ->{
@@ -35,6 +37,7 @@ class HomeActivity : AppCompatActivity() {
 
             return@setOnItemSelectedListener true
         }
+        binding.navBar.selectedItemId = R.id.nav_quran
     }
 
     private fun pushFragment(fragment: Fragment){

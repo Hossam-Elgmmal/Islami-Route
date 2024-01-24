@@ -1,21 +1,21 @@
-package com.example.islami.fragments
+package com.route.islami.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.islami.databinding.FragmentSebhaBinding
+import com.example.islami.databinding.FragmentHadeethBinding
 
-class SebhaFragment : Fragment(){
-    private lateinit var binding: FragmentSebhaBinding
+class HadeethFragment : Fragment() {
+    private lateinit var binding: FragmentHadeethBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentSebhaBinding.inflate(inflater)
+        binding = FragmentHadeethBinding.inflate(inflater)
         return binding.root
     }
 

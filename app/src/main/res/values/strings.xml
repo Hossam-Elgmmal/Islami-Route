@@ -5,4 +5,6 @@
     <string name="nav_hadeeth_text">الحديث</string>
     <string name="nav_sebha_text">السبحة</string>
     <string name="nav_radio_text">الراديو</string>
+    <string name="sura_name">اسم السورة</string>
+    <string name="sura_index">ترتيب السورة</string>
 </resources>
