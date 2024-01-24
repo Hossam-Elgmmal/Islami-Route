@@ -6,5 +6,7 @@
     <color name="bg_color">#F8F8F8</color>
     <color name="primary_gold">#B7935F</color>
     <color name="primary_gold_variant">#936E39</color>
+    <color name="light_primary">#F1C17C</color>
+    <color name="light_gold">#E8BE80</color>
 
 </resources>

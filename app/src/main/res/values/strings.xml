@@ -7,4 +7,6 @@
     <string name="nav_radio_text">الراديو</string>
     <string name="sura_name">اسم السورة</string>
     <string name="sura_index">ترتيب السورة</string>
+    <string name="count">عدد التسبيجات</string>
+    <string name="tasbeeh">سبحان الله</string>
 </resources>

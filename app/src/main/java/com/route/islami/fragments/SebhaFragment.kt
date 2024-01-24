@@ -9,6 +9,7 @@ import com.example.islami.databinding.FragmentSebhaBinding
 
 class SebhaFragment : Fragment(){
     private lateinit var binding: FragmentSebhaBinding
+    private var count = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,5 +22,16 @@ class SebhaFragment : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.currentValue.text = "$count"
+        binding.currentValue.setOnClickListener {
+            count = 0
+            binding.currentValue.text = "$count"
+        }
+
+        binding.countUp.setOnClickListener {
+            count++
+            binding.currentValue.text = "$count"
+        }
     }
 }
