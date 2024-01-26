@@ -10,4 +10,12 @@
     <string name="count">عدد التسبيجات</string>
     <string name="tasbeeh">سبحان الله</string>
     <string name="_0">0</string>
+
+    <array name="azkar">
+        <item>سبحان الله</item>
+        <item>الحمد الله</item>
+        <item>لا إله إلا الله</item>
+        <item>الله أكبر</item>
+    </array>
+
 </resources>
