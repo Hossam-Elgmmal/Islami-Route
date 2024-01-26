@@ -9,6 +9,7 @@
         <item name="colorSecondaryVariant">@color/gray</item>
         <item name="android:statusBarColor">@color/primary_gold_variant</item>
         <item name="fontFamily">@font/el_messiri</item>
+        <item name="android:textColor">@color/text_color</item>
     </style>
 
     <style name="Theme.Islami" parent="Base.Theme.Islami" />
