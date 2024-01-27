@@ -1,11 +1,14 @@
 package com.route.islami.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.islami.databinding.FragmentHadeethBinding
+import com.route.islami.Constants
+import com.route.islami.HadeethActivity
 import com.route.islami.adapters.AyaAdapter
 
 class HadeethFragment : Fragment() {
@@ -48,5 +51,16 @@ class HadeethFragment : Fragment() {
 
         }
         adapter.updateData(ahadeethNameList)
+        adapter.listener = object : AyaAdapter.onHadeethClickListener {
+            override fun onClick(index: Int) {
+                val intent = Intent(requireContext(), HadeethActivity::class.java)
+
+                intent.putExtra(Constants.EXTRA_NAME, ahadeethNameList[index])
+                intent.putExtra(Constants.EXTRA_DETAILS, ahadeethDetailList[index])
+
+                startActivity(intent)
+            }
+
+        }
     }
 }

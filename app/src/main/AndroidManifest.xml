@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Islami"
         tools:targetApi="31">
         <activity
+            android:name="com.route.islami.HadeethActivity"
+            android:exported="false" />
+        <activity
             android:name="com.route.islami.SuraActivity"
             android:exported="false" />
         <activity

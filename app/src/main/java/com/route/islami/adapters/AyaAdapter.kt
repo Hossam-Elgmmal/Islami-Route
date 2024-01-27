@@ -10,6 +10,7 @@ import com.example.islami.databinding.ItemAyaBinding
 class AyaAdapter(private var ayaList: List<String>?) : Adapter<AyaAdapter.AyaViewHolder>() {
 
 
+    lateinit var listener: onHadeethClickListener
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AyaViewHolder {
         val context = parent.context
         val inflater = LayoutInflater.from(context)
@@ -24,6 +25,9 @@ class AyaAdapter(private var ayaList: List<String>?) : Adapter<AyaAdapter.AyaVie
     override fun onBindViewHolder(holder: AyaViewHolder, position: Int) {
         val item = ayaList?.get(position) ?: return
         holder.bind(item)
+        holder.binding.root.setOnClickListener {
+            listener.onClick(position)
+        }
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -39,5 +43,9 @@ class AyaAdapter(private var ayaList: List<String>?) : Adapter<AyaAdapter.AyaVie
             binding.aya.text = aya
 
         }
+    }
+
+    interface onHadeethClickListener {
+        fun onClick(index: Int)
     }
 }

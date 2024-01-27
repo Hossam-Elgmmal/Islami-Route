@@ -2,7 +2,8 @@ package com.route.islami
 
 class Constants {
     companion object {
-        val EXTRA_NAME = "name"
-        val EXTRA_POSITION = "position"
+        const val EXTRA_NAME = "name"
+        const val EXTRA_DETAILS = "details"
+        const val EXTRA_POSITION = "position"
     }
 }
