@@ -44,6 +44,7 @@
     </Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ayat_recycler"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/rect"
