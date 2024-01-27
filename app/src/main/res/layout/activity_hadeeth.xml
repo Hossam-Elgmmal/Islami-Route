@@ -21,7 +21,6 @@
 
 
             <TextView
-                android:id="@+id/name_of_hadeeth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="28sp"
@@ -32,11 +31,11 @@
                 tools:text="الحديث الأول" />
 
             <ImageView
-                android:id="@+id/back_icon"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:padding="16dp"
+                app:tint="@color/text_color"
                 android:src="@drawable/ic_back"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -46,7 +45,6 @@
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
-        android:id="@+id/hadeeth_detail"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/rect"

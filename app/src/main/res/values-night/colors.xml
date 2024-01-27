@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#A3A3A3</color>
+    <color name="primary_gold">#FACC1D</color>
+    <color name="primary_gold_variant">#936E39</color>
+    <color name="count_bg">#141A2E</color>
+    <color name="text_color">#F8F8F8</color>
+    <color name="tasbeeh_color">#141A2E</color>
+    <color name="white_alpha">#CC141A2E</color>
+    <color name="nav_bg">#141A2E</color>
+</resources>

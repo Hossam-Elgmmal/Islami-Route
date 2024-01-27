@@ -21,7 +21,6 @@
 
 
             <TextView
-                android:id="@+id/name_of_sura"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
@@ -32,19 +31,18 @@
                 tools:text="الفاتحة" />
 
             <ImageView
-                android:id="@+id/back_icon"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:padding="16dp"
                 android:src="@drawable/ic_back"
+                app:tint="@color/text_color"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/ayat_recycler"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/rect"
