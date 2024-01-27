@@ -7,7 +7,7 @@
     android:background="@drawable/bg_home"
     tools:context="com.route.islami.SuraActivity">
 
-    <Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/sura_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/ayat_recycler"
