@@ -12,6 +12,10 @@
     <string name="_0">0</string>
     <string name="al_hadeeth">الأحاديث</string>
     <string name="go_back">go back</string>
+    <string name="quran_radio">إذاعة القرآن الكريم</string>
+    <string name="previous">previous</string>
+    <string name="play">play</string>
+    <string name="next">next</string>
 
     <array name="azkar">
         <item>سبحان الله</item>
