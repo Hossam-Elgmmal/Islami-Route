@@ -8,21 +8,20 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Islami"
         tools:targetApi="31">
         <activity
-            android:name="com.route.islami.HadeethActivity"
+            android:name="com.route.islami.activities.HadeethActivity"
             android:exported="false" />
         <activity
-            android:name="com.route.islami.SuraActivity"
+            android:name="com.route.islami.activities.SuraActivity"
             android:exported="false" />
         <activity
-            android:name="com.route.islami.HomeActivity"
+            android:name="com.route.islami.activities.HomeActivity"
             android:exported="false" />
         <activity
-            android:name="com.route.islami.SplashActivity"
+            android:name="com.route.islami.activities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

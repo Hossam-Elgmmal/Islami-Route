@@ -7,11 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.islami.databinding.FragmentQuranBinding
-import com.route.islami.Constants
-import com.route.islami.SuraActivity
+import com.route.islami.activities.SuraActivity
 import com.route.islami.adapters.SuraNameAdapter
 import com.route.islami.adapters.model.SuraItem
 import com.route.islami.adapters.model.nameList
+import com.route.islami.constants.Constants
 
 class QuranFragment : Fragment() {
 

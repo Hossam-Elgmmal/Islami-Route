@@ -1,9 +1,10 @@
-package com.route.islami
+package com.route.islami.activities
 
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import androidx.appcompat.app.AppCompatActivity
 import com.example.islami.databinding.ActivityHadeethBinding
+import com.route.islami.constants.Constants
 
 class HadeethActivity : AppCompatActivity() {
     lateinit var binding: ActivityHadeethBinding

@@ -1,4 +1,4 @@
-package com.route.islami
+package com.route.islami.constants
 
 class Constants {
     companion object {

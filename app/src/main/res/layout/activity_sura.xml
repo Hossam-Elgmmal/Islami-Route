@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_home"
-    tools:context="com.route.islami.SuraActivity">
+    tools:context="com.route.islami.activities.SuraActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/sura_toolbar"
@@ -40,6 +40,7 @@
                 android:src="@drawable/ic_back"
                 app:tint="@color/text_color"
                 app:layout_constraintStart_toStartOf="parent"
+                android:contentDescription="@string/go_back"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>

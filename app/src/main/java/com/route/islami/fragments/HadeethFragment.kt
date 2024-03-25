@@ -7,9 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.islami.databinding.FragmentHadeethBinding
-import com.route.islami.Constants
-import com.route.islami.HadeethActivity
+import com.route.islami.activities.HadeethActivity
 import com.route.islami.adapters.AyaAdapter
+import com.route.islami.constants.Constants
 
 class HadeethFragment : Fragment() {
     private lateinit var binding: FragmentHadeethBinding

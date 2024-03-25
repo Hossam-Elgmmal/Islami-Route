@@ -1,14 +1,15 @@
-package com.route.islami
+package com.route.islami.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.islami.databinding.ActivitySuraBinding
 import com.route.islami.adapters.AyaAdapter
+import com.route.islami.constants.Constants
 
 class SuraActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySuraBinding
-    lateinit var adapter: AyaAdapter
+    private lateinit var adapter: AyaAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySuraBinding.inflate(layoutInflater)
