@@ -15,6 +15,8 @@ data class Radio(
     var url: String? = null,
 
     @SerializedName("recent_date")
-    var recentDate: String? = null
+    var recentDate: String? = null,
+
+    var isPlaying: Boolean = false
 
 )
