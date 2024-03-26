@@ -1,6 +1,12 @@
 package com.route.islami.fragments
 
+import android.content.ComponentName
+import android.content.Context
+import android.content.Intent
+import android.content.ServiceConnection
 import android.os.Bundle
+import android.os.IBinder
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +16,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.route.islami.adapters.RadioAdapter
 import com.route.islami.adapters.model.RadiosResponse
 import com.route.islami.api.ApiManager
+import com.route.islami.services.RadioPlayerService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -17,6 +24,8 @@ import retrofit2.Response
 class RadioFragment : Fragment() {
     private lateinit var binding: FragmentRadioBinding
     private val adapter = RadioAdapter()
+    var radioService: RadioPlayerService? = null
+    var bound = false
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -35,6 +44,24 @@ class RadioFragment : Fragment() {
 
     private fun initRecycler() {
         binding.radioRecycler.adapter = adapter
+        adapter.onPlayClick = { radio, position ->
+
+            radioService?.let { radioService ->
+                if (!radioService.getIsPlaying()) {
+                    radioService
+                        .startMediaPlayer(
+                            radio.url ?: "",
+                            radio.name ?: "",
+                            radio.id ?: 0
+                        )
+                    adapter.updateRadio(true, position)
+                } else {
+                    radioService.pauseMediaPlayer()
+                    adapter.updateRadio(false, position)
+                }
+            }
+
+        }
     }
 
     private fun getRadiosFromApi() {
@@ -52,7 +79,7 @@ class RadioFragment : Fragment() {
                         Snackbar
                             .make(
                                 binding.root,
-                                "no response",
+                                response.message() ?: "no response",
                                 Snackbar.LENGTH_LONG
                             )
                             .show()
@@ -71,4 +98,52 @@ class RadioFragment : Fragment() {
 
             })
     }
+
+    override fun onStart() {
+        super.onStart()
+        radioService?.stopSelf()
+        startService()
+        bindService()
+
+    }
+
+    private fun startService() {
+        val intent = Intent(requireActivity(), RadioPlayerService::class.java)
+        requireActivity().startService(intent)
+
+    }
+
+
+    private val connection = object : ServiceConnection {
+        override fun onServiceConnected(name: ComponentName?, service: IBinder?) {
+
+
+            val binder = service as RadioPlayerService.MyBinder
+            radioService = binder.getService()
+            bound = true
+
+
+        }
+
+        override fun onServiceDisconnected(name: ComponentName?) {
+
+            bound = false
+            Log.e("FATAL", "onServiceDisconnected: $name ")
+
+        }
+
+    }
+
+    private fun bindService() {
+        val intent = Intent(requireContext(), RadioPlayerService::class.java)
+        requireActivity().bindService(intent, connection, Context.BIND_AUTO_CREATE)
+
+    }
+
+    override fun onStop() {
+        super.onStop()
+        requireActivity().unbindService(connection)
+
+    }
+
 }

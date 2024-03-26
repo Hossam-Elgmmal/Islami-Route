@@ -12,12 +12,17 @@ import com.route.islami.adapters.model.Radio
 class RadioAdapter : Adapter<RadioAdapter.RadioViewHolder>() {
 
     private val radiosList = mutableListOf<Radio>()
-    var onPlayClick: () -> Unit = {}
+    var onPlayClick: (Radio, Int) -> Unit = { _, _ -> }
 
     @SuppressLint("NotifyDataSetChanged")
     fun setList(newList: List<Radio>) {
         radiosList.addAll(newList)
         notifyDataSetChanged()
+    }
+
+    fun updateRadio(isPlaying: Boolean, position: Int) {
+        radiosList[position].isPlaying = isPlaying
+        notifyItemChanged(position)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RadioViewHolder {
@@ -36,7 +41,8 @@ class RadioAdapter : Adapter<RadioAdapter.RadioViewHolder>() {
         val radio = radiosList[position]
         holder.bind(radio)
         holder.binding.playButton.setOnClickListener {
-            onPlayClick()
+            onPlayClick(radio, position)
+
         }
     }
 

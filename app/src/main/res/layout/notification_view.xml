@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:weightSum="3">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="0.5"
+        android:contentDescription="@string/islami"
+        android:src="@drawable/splash_image" />
+
+    <TextView
+        android:id="@+id/notification_text"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="@string/islami"
+        android:textAppearance="@style/TextAppearance.Compat.Notification.Title" />
+
+    <ImageView
+        android:id="@+id/notification_play"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="0.5"
+        android:contentDescription="@string/play"
+        android:src="@drawable/ic_play"
+        app:tint="@color/primary_gold" />
+
+
+</LinearLayout>
